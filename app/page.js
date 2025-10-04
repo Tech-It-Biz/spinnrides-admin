@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, Car, Users, TrendingUp, Plus, X, Edit2, Trash2, Eye, Search } from 'lucide-react';
-import BookingsTimeline from "../../components/dashboard/BookingsTimeline";
+import BookingsTimeline from "../components/dashboard/BookingsTimeline";
 import Image from 'next/image';
 
 const CarRentalDashboard = () => {
