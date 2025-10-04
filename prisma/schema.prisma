@@ -1,0 +1,90 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(cuid())
+  name          String
+  email         String?        @unique
+  phoneNumber   String         @unique
+  password      String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  bookings      Booking[]
+  notifications Notification[]
+}
+
+model Car {
+  id           String    @id @default(cuid())
+  brand        String
+  model        String
+  licensePlate String    @unique
+  baseImage    String
+  images       String[]
+  amountPerDay Int
+  carUses      CarUse[]
+  seats        Int?
+  transmission String?
+  fuel         String?
+  year         Int?
+  luggage      Int?
+  doors        Int?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  slug         String?   @unique
+  bookings     Booking[]
+}
+
+model Booking {
+  id           String         @id @default(cuid())
+  userId       String?
+  carId        String
+  totalAmount  Int
+  payedAmount  Int
+  startDate    DateTime
+  endDate      DateTime
+  status       BookingStatus  @default(PENDING)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  rideType     String
+  car          Car            @relation(fields: [carId], references: [id])
+  user         User?          @relation(fields: [userId], references: [id])
+  notification Notification[]
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  message   String
+  sent      Boolean  @default(false)
+  userId    String
+  bookingId String?
+  createdAt DateTime @default(now())
+  booking   Booking? @relation(fields: [bookingId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+enum CarUse {
+  ALL_USE
+  FAMILY
+  SAFARIS
+  ROAD_TRIPS
+  WEEKEND_PLANS
+  BUSINESS
+  OFF_ROAD
+  CITY_DRIVING
+  LUXURY
+  WEDDING
+  AIRPORT_TRANSFER
+}

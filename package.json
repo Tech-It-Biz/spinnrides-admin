@@ -1,0 +1,44 @@
+{
+  "name": "our-church",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "@prisma/extension-accelerate": "^2.0.2",
+    "@prisma/extension-pulse": "^1.2.0",
+    "@react-spring/three": "^9.7.5",
+    "@react-three/drei": "^9.114.6",
+    "@react-three/fiber": "^8.17.10",
+    "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
+    "framer-motion": "^11.11.9",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.484.0",
+    "next": "^15.2.4",
+    "next-auth": "^4.24.11",
+    "next-themes": "^0.4.6",
+    "prisma": "^6.16.3",
+    "react": "^18",
+    "react-calendar": "^5.1.0",
+    "react-calendly": "^4.3.1",
+    "react-dom": "^18",
+    "react-icons": "^5.5.0",
+    "react-phone-input-2": "^2.15.1",
+    "react-time-picker": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.14.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}

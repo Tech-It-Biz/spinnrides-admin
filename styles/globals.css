@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://unpkg.com/frappe-gantt/dist/frappe-gantt.css");
+
+.react-tel-input .form-control {
+  @apply !w-full !pl-12 !pr-4 !h-12 !py-3 !border-2 !border-gray-300 !rounded-lg focus:ring-2 focus:ring-black focus:border-black transition;
+}
+
+.react-tel-input .flag-dropdown {
+  @apply border-2 border-gray-300 bg-white rounded-l-lg;
+}
+
+.gantt-confirmed .bar {
+  fill: #16a34a !important; /* green */
+}
+.gantt-pending .bar {
+  fill: #facc15 !important; /* yellow */
+}
+.gantt-cancelled .bar {
+  fill: #ef4444 !important; /* red */
+}
+.gantt-default .bar {
+  fill: #6b7280 !important; /* gray */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

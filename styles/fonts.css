@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Humane';
+  src: url('/fonts/Humane-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Add Caveat font for handwritten text */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap'); 
