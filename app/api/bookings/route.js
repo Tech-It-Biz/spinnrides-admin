@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import prisma from '../../../lib/prisma'
 
-const prisma = new PrismaClient();
 
 const TELEGRAM_BOT_TOKEN = '8170260938:AAFl8uCP7DNgIXUgGrEBDpr_aR2ZfTWBtKE';
 const TELEGRAM_CHAT_ID = '7528680682';
